@@ -6,7 +6,7 @@
             </h3>
         </div>
         
-        <div class="col-md-12 mt-5">
+        <div class="col-md-12 mt-5" *ngIf="devoteeList.length">
             <table class="table table-striped">
                 <thead>
                     <th>#</th>
@@ -33,6 +33,9 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="col-md-12" *ngIf="devoteeList.length == 0">
+            <p class="text-center mt-5">Devotee List is empty please add Devotee</p>
         </div>
     </div>
 </div>

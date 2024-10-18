@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row mt-5">
+        <div col-md-12>
+            <h3 class="text-center">Devotee List
+                <a class="float-end addDevotee text-dark" routerLink="/create">Add Devotee</a>
+            </h3>
+        </div>
+        
+        <div class="col-md-12 mt-5">
+            <table class="table table-striped">
+                <thead>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Martial Status</th>
+                    <th>Star</th>
+                    <th> </th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of devoteeList; let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>{{data.firstName}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.phoneNo}}</td>
+                        <td>{{data.relationship}}</td>
+                        <td>{{data.star}}</td>
+                        <td>
+                            <!-- <button class="btn btn-outline-primary btn-sm border-0" *ngIf="data.familyMembers.length > 0">
+                                View Family
+                            </button> -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
